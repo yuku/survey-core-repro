@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import { Model } from "survey-core"
 
 export const meta: MetaFunction = () => {
   return [
@@ -8,6 +9,7 @@ export const meta: MetaFunction = () => {
 };
 
 export default function Index() {
+  const survey = new Model();
   return (
     <div className="flex h-screen items-center justify-center">
       <div className="flex flex-col items-center gap-16">
